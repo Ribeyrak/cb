@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-
+            var user = new User();
+            user.Age = 30;
         }
     }
 }
