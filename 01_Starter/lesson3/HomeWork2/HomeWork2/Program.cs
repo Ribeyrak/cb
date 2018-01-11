@@ -11,15 +11,21 @@ namespace HomeWork2
     {
         static void Main(string[] args)
         {
-            int a = 6;
+            int a = 3;
             int b = 2;
             int c = 0;
 
-            a = b + c + 1;
-            c = (a * b - 10) * 10;
+            c = (a / b + 1) * 2;
 
-            Console.WriteLine(a);
+            Console.Write("При переменной равной - ");
             Console.WriteLine(c);
+
+            
+            const double pi = 3.141;
+            double r = Math.Pow(c, 2);
+            double P = pi * r;
+            Console.Write("Площадь круга составит - ");
+            Console.WriteLine(P);
 
             Console.ReadKey();
         }
