@@ -34,9 +34,7 @@ namespace ConsoleApp2
             Console.Write("5) ");
             Console.WriteLine(x);
 
-
-
-
+               
             Console.ReadKey();
         }
     }
