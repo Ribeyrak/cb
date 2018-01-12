@@ -11,11 +11,11 @@ namespace HomeWork2
     {
         static void Main(string[] args)
         {
-            float a = 3;
+            float a = 8;
             float b = 2;
             float c = 0;
 
-            c = (a / b + 1) * 2;
+            c = (a / b + 1) * 3;
 
             Console.Write("При переменной равной - ");
             Console.WriteLine(c);

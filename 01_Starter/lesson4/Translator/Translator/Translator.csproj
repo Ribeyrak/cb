@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3254A8B-9DDB-4FE1-84A3-709E97213AFC}</ProjectGuid>
+    <ProjectGuid>{ABFC8DD6-F6F0-4901-9557-A45BB058BFC2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HomeWork2</RootNamespace>
-    <AssemblyName>HomeWork2</AssemblyName>
+    <RootNamespace>Translator</RootNamespace>
+    <AssemblyName>Translator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProgramUpdate.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
