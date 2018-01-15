@@ -10,17 +10,17 @@ namespace Random
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число от 0-100");
+            int a = 1, b = 15 ; //c = 36 - 50, d = 50 - 100;
+            Console.WriteLine("Введите число от 0 до 100");
             string number = Console.ReadLine();
-            int grup = Convert.ToInt32(number);
 
-            switch (grup)
+            switch (number)
             {
-                case "0-14": Console.WriteLine("Вы попали в первую группу");
+                case "a": Console.WriteLine("Вы попали в первую группу");
                     break;
-                case "14-32": Console.WriteLine("Вы попали во вторую группу");
+                case "b": Console.WriteLine("Вы попали во вторую группу");
                     break;
-                case "32-": Console.WriteLine("Вы попали в третью группу");
+                case "c": Console.WriteLine("Вы попали в третью группу");
                     break;
                 case "d": Console.WriteLine("Вы попали в четвертую группу");
                     break;
