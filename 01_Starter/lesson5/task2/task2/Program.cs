@@ -13,27 +13,20 @@ namespace task2
     {
         static void Main(string[] args)
         {
-            //byte operand = 0x01; //1111 0000
-            //byte mask = 0xFD;     //1111 1101 
-            //Console.WriteLine("operand = {0:X}", operand);
-            //
-            //operand = (byte) (operand | mask);
-            //Console.WriteLine("operand = {0:X}", operand);
             Console.WriteLine("Введите число:");
             int s = Convert.ToInt32(Console.ReadLine());
+            int n = (int)(s << 31);
 
-            byte operand1 = Console.ReadLine();
-            int result;
+            if (n == 0)
+            {
+                Console.WriteLine("Число четное");
+            }
+            else
+            {
+                Console.WriteLine("Число не четное");
+            }
 
-            if 
-
-            operand1 = 0x00;
-            operand2 = 0x02;
-            result = operand1 | operand2;
-
-            //Console.WriteLine("{0} ")
-
-            Console.ReadKey();
+           Console.ReadKey();
         }
     }
 }
