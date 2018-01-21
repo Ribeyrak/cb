@@ -21,7 +21,7 @@ namespace task2
 
             for (int x = a++; a < b; a++)
             {
-                Console.WriteLine("{0}", x);
+                Console.WriteLine("{0}", a);
                 result += a;
             }
             result += a;
