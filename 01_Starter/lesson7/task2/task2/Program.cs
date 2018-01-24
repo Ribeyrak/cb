@@ -19,27 +19,27 @@ namespace task2
             }
         }
 
-        //static void Number(int operand);
-        //{
-        //    int divider;
-        //    int ost;
-        //
-        //    do
-        //    {
-        //        ost = operand / divider
-        //        if (ost != 0)
-        //            divider++;
-        //    } 
-        //    while (ost != 0);
-        //
-        //    if (divider == operand)
-        //        Console.WriteLine("Число является простым");
-        //    else
-        //    {
-        //        Console.WriteLine("Число не является простым");
-        //    }
-        //
-        //}
+        static void Number(int operand)
+        {
+            int divider = 2;
+            int ost;
+        
+            do
+            {
+                ost = operand % divider;
+                if (ost != 0)
+                    divider++;
+            } 
+            while (ost != 0);
+        
+            if (divider == operand)
+                Console.WriteLine("Число является простым");
+            else
+            {
+                Console.WriteLine("Число не является простым");
+            }
+        
+        }
 
         static void Divider(int operand)
         {
@@ -62,7 +62,7 @@ namespace task2
 
             Sign(operand);
             Divider(operand);
-            //Number(operand);
+            Number(operand);
 
             Console.ReadKey();
         }
