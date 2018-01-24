@@ -8,52 +8,61 @@ namespace task1
 {
     class Program
     {
-        static void Add(int operand1,int operand2)
+        static int Add(int operand1,int operand2)
         {
-           Console.WriteLine("{0} + {1} = {2}",operand1, operand2, (operand1+operand2));
+            
+           return operand1+operand2;
         }
 
-        static void Sub(int operand1, int operand2)
+        static int Sub(int operand1, int operand2)
         {
-            Console.WriteLine("{0} - {1} = {2}", operand1, operand2, (operand1 - operand2));
+            return operand1 - operand2;
         }
 
-        static void Mul(int operand1, int operand2)
+        static int Mul(int operand1, int operand2)
         {
-            Console.WriteLine("{0} * {1} = {2}", operand1, operand2, (operand1 * operand2));
+            return operand1 * operand2;
         }
 
-        static void Div(int operand1, int operand2)
+        static int Div(int operand1, int operand2)
         {
-            if (operand1 / operand2 != 0)
+            
+            if (operand2 != 0)
             {
-                Console.WriteLine("{0} + {1} = {2}", operand1, operand2, (operand1 / operand2));
+                return operand1 / operand2;
             }
             else
             {
                 Console.WriteLine("На ноль делить нельзя");
+                return 0;
             }
             
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Vvedite 1");
-            operand1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Vvedite 2");
-            operand2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Znak");
+            Console.Write("Введите первое число: ");
+            int operand1 = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Введите второе число: ");
+            int operand2 = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Введите знак арифметического действия: ");
             string sign = Console.ReadLine();
-
+            
             switch (sign)
             {
-                case "+": Console.WriteLine(operand1, operand2);
+                case "+": Console.WriteLine("{0} + {1} = {2}", operand1 ,operand2, Add(operand1,operand2));
+                    break;
+                case "-": Console.WriteLine("{0} - {1} = {2}", operand1, operand2, Sub(operand1, operand2));
+                    break;
+                case "*": Console.WriteLine("{0} * {1} = {2}", operand1, operand2, Mul(operand1, operand2));
+                        break;
+                case "/": Console.WriteLine("{0} / {1} = {2}", operand1, operand2, Div(operand1, operand2));
+                    break;
             }
-                
-
-
+            
+            Console.ReadKey();
         }
     }
 }
