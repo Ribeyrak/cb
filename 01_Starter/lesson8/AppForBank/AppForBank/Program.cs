@@ -9,10 +9,7 @@ namespace AppForBank
     class Program
     {
         static void Kredit(ref int sum)
-        //(ref int part1, ref int part2, ref int part3, ref int part4, ref int part5, ref int part6,
-            //ref int part7)
         {
-            //int sum; // = part1 + part2 + part3 + part4 + part5 + part6 + part7;
             if (sum == 700)
                 Console.WriteLine("Кредит погашен");
             else if (sum >= 700)
@@ -20,13 +17,13 @@ namespace AppForBank
             else
                 Console.WriteLine("Долг клиента составляет {0} грн.", (700 - sum));
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Укажите сумму внесенную клиентом: ");
             int sum = Convert.ToInt32(Console.ReadLine());
 
-            Kredit(ref sum);//(ref part1, ref part2, ref part3, ref part4, ref part5, ref part6,
-            //ref part7);
+            Kredit(ref sum);
 
             Console.ReadKey();
         }
