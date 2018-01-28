@@ -8,7 +8,25 @@ namespace Task3
 {
     class Program
     {
-        static int MyRevers(int[] array)
+        static int[] MyRevers(int[] array)
+        {
+            int buf = 0;
+            int n = array.Length;
+            int j = n - 1;
+
+            for (int k = 0; k < j; k++)
+            {
+                buf = array[k];
+                array[k] = array[j];
+                array[j] = buf;
+                j--;
+            }
+            
+            return array;
+
+        }
+
+        static void Main(string[] args)
         {
             int[] array = new int[10];
 
@@ -16,19 +34,6 @@ namespace Task3
             {
                 array[i] = i;
             }
-
-            for (int i = array.Length - 1; i >= 0; i--)
-            {
-                Console.WriteLine(array[i]);
-            }
-
-            return array[i];
-
-        }
-
-        static void Main(string[] args)
-        {
-
         }
     }
 }
