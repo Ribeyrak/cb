@@ -17,7 +17,7 @@ namespace task1
                 array[i] = i+1;
             }
 
-            for (int i = 10; i > array.Length; --i)
+            for (int i = array.Length -1; i >= 0; i--)
             {
                 Console.WriteLine(array[i]);
             }
