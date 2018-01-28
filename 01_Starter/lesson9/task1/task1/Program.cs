@@ -10,9 +10,14 @@ namespace task1
     {
         static void Main(string[] args)
         {
-            int[] array = new int[10] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            int[] array = new int[10];
 
-            for (int i = 10; i < array.Length; i--)
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = i+1;
+            }
+
+            for (int i = 10; i > array.Length; --i)
             {
                 Console.WriteLine(array[i]);
             }
