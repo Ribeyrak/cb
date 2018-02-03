@@ -9,15 +9,8 @@ namespace Rectangle
     class Rectangle
     {
         private double side1;
-        public double Area
-        {
-            get { return side1; }
-        }
         private double side2;
-        public double Perimeter
-        {
-            get { return side2; }
-        }
+      
 
         public Rectangle(double side1, double side2)
         {
@@ -25,14 +18,23 @@ namespace Rectangle
             this.side2 = side2;
         }
 
+        //Создаю методы для вычислоения площади и периметра
         double AreaCalculator()
         {
             return side1 * side2;
+        }
+        public double Area
+        {
+            get { return AreaCalculator(); }
         }
 
         double PerimeterCalculator()
         {
             return (side1 + side2) * 2;
+        }
+        public double Perimeter
+        {
+            get { return PerimeterCalculator(); }
         }
     }
 
@@ -53,8 +55,8 @@ namespace Rectangle
     }
 }
 //Требуется: Создать класс с именем Rectangle.  (+)
-//В теле класса создать два поля, описывающие длины сторон double side1, side2. 
-//Создать пользовательский конструктор Rectangle(double side1, double side2) , в теле которого поля side1 и side2 инициализируются значениями аргументов.
-//Создать два метода, вычисляющие площадь прямоугольника - double AreaCalculator () и периметр прямоугольника - double PerimeterCalculator (). 
+//В теле класса создать два поля, описывающие длины сторон double side1, side2. (+)
+//Создать пользовательский конструктор Rectangle(double side1, double side2) , в теле которого поля side1 и side2 инициализируются значениями аргументов. (+)
+//Создать два метода, вычисляющие площадь прямоугольника - double AreaCalculator () и периметр прямоугольника - double PerimeterCalculator (). (+)
 //Создать два свойства double Area и double Perimeter с одним методом доступа get.Написать программу, которая принимает от пользователя длины двух сторон прямоугольника и выводит
-//на экран периметр и площадь.
+//на экран периметр и площадь. (+)
