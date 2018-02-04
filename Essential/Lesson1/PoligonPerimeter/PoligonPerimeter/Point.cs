@@ -1,24 +1,19 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-
+﻿
 namespace PoligonPerimeter
 {
     class Point
     {
-        int a, b;
+        int c, d;
         string field;
 
-        public int A
+        public int C
         {
-            get { return a; }
+            get { return c; }
         }
 
-        public int B
+        public int D
         {
-            get { return b; }
+            get { return d; }
         }
 
         public string Field
@@ -28,8 +23,8 @@ namespace PoligonPerimeter
 
         public Point(int a, int b, string field)
         {
-            this.a = a;
-            this.b = b;
+            this.c = c;
+            this.d = d;
             this.field = field;
         }
     }
