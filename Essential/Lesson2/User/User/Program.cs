@@ -1,4 +1,4 @@
-﻿//using System;
+﻿using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -8,25 +8,53 @@ namespace User
 {
     class User
     {
-        User user = null;
+        string login;
+        string name;
+        string family;
+        int age;
+                
+        readonly DateTime dataRegistration;
+        public User ()
+        {
+            dataRegistration = DateTime.Now;
+        }
 
-        void Method()
+
+        public string Login
         {
-            string login = "Dendi";
-            string name = "Super";
-            string family = "Mario";
-            string age = "17";
+            set { login = value; }
+            get { return login; }
         }
-        readonly string dataRegistration;
-        public User()
+
+        public string Name
         {
-            dataRegistration = "Дата регистрации: 20.06.2016";
+            set { name = value; }
+            get { return name; }
         }
-        public void CallMethod()
+
+        public string Family
         {
-            user = new User();
-            user.Method();
+            set { family = value; }
+            get { return family; }
         }
+
+        public int Age
+        {
+            set { age = value; }
+            get { return age; }
+        }
+
+        public User(string login, string name, string family, int age)
+        {
+            this.login = login;
+            this.name = name;
+            this.family = family;
+            this.age = age;
+            dataRegistration = DateTime.Now;
+        }
+        
+
+
     }
 
     class Program
@@ -34,8 +62,18 @@ namespace User
         static void Main()
         {
             User user = new User();
-            user.CallMethod();
-            
+
+            user.Login = "kartas";
+            user.Name = "Super";
+            user.Family = "Mario";
+            user.Age = 17;
+
+            Console.WriteLine(user.Login);
+            Console.WriteLine(user.Name);
+            Console.WriteLine(user.Family);
+            Console.WriteLine(user.Age);
+            //Console.WriteLine(user.dataRegistration.ToString());
+
             Console.ReadKey();
         }
     }
