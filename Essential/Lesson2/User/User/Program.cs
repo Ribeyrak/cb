@@ -13,13 +13,8 @@ namespace User
         string family;
         int age;
                 
-        readonly DateTime dataRegistration;
-        public User ()
-        {
-            dataRegistration = DateTime.Now;
-        }
-
-
+        public readonly DateTime dataRegistration;
+                      
         public string Login
         {
             set { login = value; }
@@ -42,6 +37,11 @@ namespace User
         {
             set { age = value; }
             get { return age; }
+        }
+
+        public User()
+        {
+            dataRegistration = DateTime.Now;
         }
 
         public User(string login, string name, string family, int age)
@@ -72,9 +72,10 @@ namespace User
             Console.WriteLine(user.Name);
             Console.WriteLine(user.Family);
             Console.WriteLine(user.Age);
-            //Console.WriteLine(user.dataRegistration.ToString());
+            Console.WriteLine(user.dataRegistration.ToString());
 
-            Console.ReadKey();
+            Console.Write("Press <Enter> to exit... ");
+      while (Console.ReadKey().Key != ConsoleKey.Enter) {}
         }
     }
 }
