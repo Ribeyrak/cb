@@ -10,27 +10,48 @@ namespace Converter
     {
         //Поля
         private double usd = 28.5, eur = 31, rub = 0.5;
-
-        //Свойства
-        public double USD
+        double uah;
+        public double UAH
         {
-            get { return usd; }
+            set { value = uah; }
         }
-        
-        public double EUR
-        {
-            get { return eur; }
-        }
-
-        public double RUB
-        {
-            get { return rub; }
-        }
+        ///Свойства
+        //public double USD
+        //{
+        //    get { return usd; }
+        //}
+        //
+        //public double EUR
+        //{
+        //    get { return eur; }
+        //}
+        //
+        //public double RUB
+        //{
+        //    get { return rub; }
+        //}
 
         //Созаю конструктор
         public Converter (double usd, double eur, double rub)
         {
+            this.usd = usd;
+            this.eur = eur;
+            this.rub = rub;
+        }
 
+        void ToUsd(double Sum)
+        {
+            Console.WriteLine(uah * usd);
+        }
+
+        void ToEur(double Sum)
+        {
+            Console.WriteLine(uah * eur);
+        }
+
+        void ToRub(double Sum)
+        {
+            Console.WriteLine(uah * rub);
         }
     }
 
@@ -39,12 +60,13 @@ namespace Converter
         static void Main(string[] args)
         {
             Console.WriteLine("Введите номер валюты для конвертации: 1 - USD, 2 - EUR, 3 - RUB ");
+            if
             Console.ReadLine();
-
+            
             Console.WriteLine("Vvedite summu dlia obmena: ");
-            Convert.ToInt32(Console.ReadLine());
+            double uah = Convert.ToInt32(Console.ReadLine());
 
-            Сonsole.WriteLine();
+            Console.WriteLine();
         }
     }
 }
