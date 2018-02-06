@@ -32,7 +32,7 @@ namespace Converter
             get { return rub; }
         }
 
-        //Созаю конструктор
+        //Создаю конструктор
         public Converter ()
         {
         }
