@@ -8,8 +8,15 @@ namespace Printer
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            ColorPrinter print = new ColorPrinter(ConsoleColor.Yellow);
+            print.Print("Hello");
+
+            ColorPrinter print1 = new ColorPrinter(ConsoleColor.Red);
+            print1.Print("Hello");
+
+            Console.ReadKey();
         }
     }
 }
