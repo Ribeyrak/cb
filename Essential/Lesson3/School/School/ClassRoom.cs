@@ -8,5 +8,6 @@ namespace School
 {
     class ClassRoom
     {
+        Pupil instance = new Pupil();
     }
 }
