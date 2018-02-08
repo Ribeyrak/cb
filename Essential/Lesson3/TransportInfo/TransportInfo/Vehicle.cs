@@ -24,15 +24,15 @@ namespace TransportInfo
         {
             get { return data; }
         }
-    }
+    
+        public Vehicle(int price, int speed, int data)
+        {
+            this.price = price;
+            this.speed = speed;
+            this.data = data;
+        }
 
-    public Vehicle(int price, int speed, int data)
-    {
-        this.price = price;
-        this.speed = speed;
-        this.data = data;
     }
-
 
     class Plane : Vehicle
     {

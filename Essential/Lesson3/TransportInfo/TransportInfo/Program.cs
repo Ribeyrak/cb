@@ -10,6 +10,15 @@ namespace TransportInfo
     {
         static void Main()
         {
+            //Ship ship = new Ship(20000, 120, 2000) { Passenger = 28, Port = "Севастополь" };
+            //
+            //Console.WriteLine("Цена корабля {0}, скорость {1}, год выпуска {2}, количество пасажиров {3}, порт приписки {4}", ship.Price, ship.Speed, ship.Data, ship.Passenger, ship.Port);
+
+            Car car = new Car(5000, 160, 2016);
+            Console.WriteLine("Price {0},Speed {1}, data {2}", car.Data);
+
+            // Delay.
+            Console.ReadKey();
         }
     }
 }
