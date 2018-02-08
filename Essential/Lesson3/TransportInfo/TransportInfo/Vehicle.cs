@@ -1,31 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TransportInfo
+﻿namespace TransportInfo
 {
     class Vehicle
     {
-        int price, speed, data;
+        double price, speed, data;
 
-        protected int Price
+        public double Price
         {
             get { return price; }
         }
 
-        protected int Speed
+        public double Speed
         {
             get { return speed; }
         }
 
-        public int Data
+        public double Data
         {
             get { return data; }
         }
     
-        public Vehicle(int price, int speed, int data)
+        public Vehicle(double price, double speed, double data)
         {
             this.price = price;
             this.speed = speed;
@@ -36,10 +30,10 @@ namespace TransportInfo
 
     class Plane : Vehicle
     {
-        public Plane(int price, int speed, int data) : base(price, speed, data) { }
+        public Plane(double price, double speed, double data) : base(price, speed, data) { }
 
-        private int high;
-        public int High
+        private double high;
+        public double High
         {
             get { return high; }
             set { high = value; }
@@ -48,7 +42,7 @@ namespace TransportInfo
 
     class Car : Vehicle
     {
-        public Car(int price, int speed, int data)
+        public Car(double price, double speed, double data)
            : base(price, speed, data)
         {
 
@@ -57,16 +51,16 @@ namespace TransportInfo
 
     class Ship : Vehicle
     {
-        public Ship(int price, int speed, int data) : base(price, speed, data)
+        public Ship(double price, double speed, double data) : base(price, speed, data)
         {
 
         }
 
-        private int passanger;
-        public int Passanger
+        private double passenger;
+        public double Passenger
         {
-            get { return passanger; }
-            set { passanger = value; }
+            get { return passenger; }
+            set { passenger = value; }
         }
 
         private string port;
