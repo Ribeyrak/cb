@@ -6,12 +6,22 @@ namespace Player
     {
         public void Play()
         {
-
+            Console.WriteLine("Проигрывание музыки");
         }
 
-        public void Pause() { }
-        public void Stop() { }
+        public void Pause()
+        {
+            Console.WriteLine("Пауза");
+        }
 
-        public void Record() { }
+        public void Stop()
+        {
+            Console.WriteLine("Остановка");
+        }
+
+        public void Record()
+        {
+            Console.WriteLine("Запись звука");
+        }
     }
 }

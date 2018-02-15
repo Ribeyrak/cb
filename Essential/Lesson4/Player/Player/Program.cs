@@ -7,7 +7,14 @@ namespace Player
     {
         static void Main(string[] args)
         {
+            Player instance = new Player();
 
+            instance.Play();
+            instance.Pause();
+            instance.Record();
+            instance.Stop();
+
+            Console.ReadKey();
         }
     }
 }
