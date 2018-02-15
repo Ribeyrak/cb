@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4797C4D9-9C31-47FC-9206-8177595C9F70}</ProjectGuid>
+    <ProjectGuid>{6101E3DB-65CC-468E-9ABB-C071D5FDBB1C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Document</RootNamespace>
-    <AssemblyName>Document</AssemblyName>
+    <RootNamespace>Player</RootNamespace>
+    <AssemblyName>Player</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Redactor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
