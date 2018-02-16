@@ -23,8 +23,14 @@ namespace Translator
             get
             {
                 for (int i = 0; i < key.Length; i++)
+                {
                     if (key[i] == index)
                         return key[i] + " - " + value[i] + " - " + ukr[i];
+                    if (value[i] == index)
+                        return value[i] + " - " + key[i] + " - " + ukr[i];
+                    if (ukr[i] == index)
+                        return ukr[i] + " - " + key[i] + " - " + value[i];
+                }
 
                 return string.Format("{0} - нет перевода для этого слова.", index);
             }
@@ -49,12 +55,14 @@ namespace Translator
             Dictionary dictionary = new Dictionary();
 
             Console.WriteLine(dictionary["книга"]);
+            Console.WriteLine(dictionary["book"]);
             Console.WriteLine(dictionary["дом"]);
             Console.WriteLine(dictionary["ручка"]);
             Console.WriteLine(dictionary["стол"]);
             Console.WriteLine(dictionary["карандаш"]);
             Console.WriteLine(dictionary["яблоко"]);
             Console.WriteLine(dictionary["солнце"]);
+            Console.WriteLine(dictionary["сонце"]);
 
             Console.WriteLine(new string('-', 20));
 
