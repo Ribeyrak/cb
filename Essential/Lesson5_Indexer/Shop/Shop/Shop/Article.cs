@@ -23,7 +23,8 @@ namespace Shop
             {
                 for (int i = 0; i < _product.Length; i++)
                 {
-                    if
+                    if(_product[i] == index)
+                        return _product[i] + " - " + _shop[i] + " - " + _price[i];
                 }
                 return string.Format("{0} - товара нет в наличии.", index);
             }
