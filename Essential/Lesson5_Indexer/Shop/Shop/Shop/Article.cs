@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-
 namespace Shop
 {
     class Article
     {
-        public string _name     { get; set; }
-        public string _shopName { get; set; }
-        public decimal _price   { get; set; }
-
-        
-        public void ToString(string _name, string _shopName, decimal _price)
+        private string _name;
+        private string _shopName;
+        private decimal _price;
+                
+        public Article(string name, string shopName, decimal price)
         {
-            Console.WriteLine("Наименование товара: {0}\nНазвание магазина {1}\nЦена товара {2} грн.", _name, _shopName, _price);
+            _name = name;
+            _shopName = shopName;
+            _price = price;
         }
         
-        public string ToString1()
+        public override string ToString()
         {
-        return "Наименование товара: " + _name + " Название магазина: " + _shopName + " Цена товара: " + _price;
+        return $"Наименование товара: {_name} Название магазина: {_shopName} Цена товара: {_price}";
         }
-        
     }
 }

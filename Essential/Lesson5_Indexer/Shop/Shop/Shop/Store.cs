@@ -1,26 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Shop
 {
     class Store
     {
-        private Article[] articls;
+        private List<Article> _articls;
 
-        public Store(int size)
+        public Store()
         {
-            articls = new Article[Math.Abs(size)];
+            _articls = new List<Article>();
         }
-        
+
+        public Article GetArticle(int index)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Article GetArticle(string articleName)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Add(Article article)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
-//Создать класс Article, содержащий следующие закрытые поля:
-//• название товара;
-//• название магазина, в котором продается товар;
-//• стоимость товара в гривнах.
-//Создать класс Store, содержащий закрытый массив элементов типа Article. 
-//Обеспечить следующие возможности: 
-//• вывод информации о товаре по номеру с помощью индекса;
-//• вывод на экран информации о товаре, название которого введено с клавиатуры, если таких товаров нет, 
-//выдать соответствующее сообщение; 
-//Написать программу, вывода на экран информацию о товаре.
