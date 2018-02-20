@@ -6,6 +6,13 @@ namespace Shop
     {
         static void Main(string[] args)
         {
+            Article shop = new Article();
+
+            Console.WriteLine(shop["Стол"]);
+            Console.WriteLine(shop["Кресло"]);
+            Console.WriteLine(shop["тумба"]);
+
+            Console.ReadKey();
         }
     }
 }

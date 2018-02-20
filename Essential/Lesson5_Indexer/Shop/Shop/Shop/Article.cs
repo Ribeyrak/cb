@@ -4,31 +4,15 @@ namespace Shop
 {
     class Article
     {
-        private string[] _product = new string[5];
-        private string[] _shop = new string[5];
-        private double[] _price = new double[5];
+        public string _name     { get; private set; }
+        public string _shopName { get; set; }
+        decimal _price;
 
-        public Article()
+        public void ToString(string _name, string _shopName)
         {
-            _product[0] = "Стол";    _shop[0] = "Эпицентр";  _price[0] = Convert.ToDouble("100");
-            _product[1] = "Стул";    _shop[1] = "Юск";       _price[1] = Convert.ToDouble("120");
-            _product[2] = "Кресло";  _shop[2] = "Эпицентр";  _price[2] = Convert.ToDouble(150);
-            _product[3] = "Диван";   _shop[3] = "Юск";       _price[3] = Convert.ToDouble(300);
-            _product[4] = "Люстра";  _shop[4] = "Мир деко";  _price[4] = Convert.ToDouble(50);
+            Console.WriteLine("Наименование товара: {0}\nНазвание магазина {1}", _name, _shopName);
         }
 
-        public string this[string index]
-        {
-            get
-            {
-                for (int i = 0; i < _product.Length; i++)
-                {
-                    if(_product[i] == index)
-                        return _product[i] + " - " + _shop[i] + " - " + _price[i];
-                }
-                return string.Format("{0} - товара нет в наличии.", index);
-            }
-        }
     }
 }
 //Создать класс Article, содержащий следующие закрытые поля:
