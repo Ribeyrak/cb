@@ -1,25 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Shop
 {
     class Article
     {
-        public string _name     { get; private set; }
+        public string _name     { get; set; }
         public string _shopName { get; set; }
-        decimal _price;
+        public decimal _price   { get; set; }
 
-        public void ToString(string _name, string _shopName)
+        
+        public void ToString(string _name, string _shopName, decimal _price)
         {
-            Console.WriteLine("Наименование товара: {0}\nНазвание магазина {1}", _name, _shopName);
+            Console.WriteLine("Наименование товара: {0}\nНазвание магазина {1}\nЦена товара {2} грн.", _name, _shopName, _price);
         }
-
+        
+        public string ToString1()
+        {
+        return "Наименование товара: " + _name + " Название магазина: " + _shopName + " Цена товара: " + _price;
+        }
+        
     }
 }
-//Создать класс Article, содержащий следующие закрытые поля:
-//• название товара;
-//• название магазина, в котором продается товар;
-//• стоимость товара в гривнах.
-//Создать класс Store, содержащий закрытый массив элементов типа Article. 
-//Обеспечить следующие возможности: • вывод информации о товаре по номеру с помощью индекса;
-//• вывод на экран информации о товаре, название которого введено с клавиатуры, если таких товаров нет, 
-//выдать соответствующее сообщение; Написать программу, вывода на экран информацию о товаре.

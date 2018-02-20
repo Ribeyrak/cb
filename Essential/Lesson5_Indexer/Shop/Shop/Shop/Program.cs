@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Shop
 {
@@ -6,21 +7,22 @@ namespace Shop
     {
         static void Main(string[] args)
         {
-            Article shop = new Article();
+            List<Article> articls = new List<Article>(3);
+            articls.Add(new Article() { _name = "Table", _shopName = "Jusk", _price = 2500 });
+            articls.Add(new Article() { _name = "TV", _shopName = "Comfy", _price = 10250 });
+            articls.Add(new Article() { _name = "Phone", _shopName = "Rozetka", _price = 8500 });
 
-            Console.WriteLine(shop["Стол"]);
-            Console.WriteLine(shop["Кресло"]);
-            Console.WriteLine(shop["тумба"]);
+            foreach (Article p in articls)
+            {
+                Console.WriteLine(p._name);// d._shopName, c._price);
+            }
+            foreach (Article d in articls)
+            {
+                Console.WriteLine(d._shopName);
+            }
 
             Console.ReadKey();
         }
     }
 }
-//Создать класс Article, содержащий следующие закрытые поля:
-//• название товара;
-//• название магазина, в котором продается товар;
-//• стоимость товара в гривнах.
-//Создать класс Store, содержащий закрытый массив элементов типа Article. 
-//Обеспечить следующие возможности: • вывод информации о товаре по номеру с помощью индекса;
-//• вывод на экран информации о товаре, название которого введено с клавиатуры, если таких товаров нет, 
-//выдать соответствующее сообщение; Написать программу, вывода на экран информацию о товаре.
+
