@@ -23,7 +23,7 @@ namespace Shop
 
         public void Add(Article article)
         {
-            throw new System.NotImplementedException();
+            _articls.Add(article);
         }
     }
 }
