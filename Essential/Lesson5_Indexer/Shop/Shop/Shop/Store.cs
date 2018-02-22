@@ -18,7 +18,16 @@ namespace Shop
 
         public Article GetArticle(string articleName)
         {
-            return ();
+            Article article = null;
+            foreach (var a in _articls)
+            {
+                if (a.Name == articleName)
+                {
+                    article = a;
+                }
+            }
+
+            return article;
         }
 
         public void Add(Article article)
