@@ -13,12 +13,12 @@ namespace Shop
 
         public Article GetArticle(int index)
         {
-            throw new System.NotImplementedException();
+            return _articls[index];
         }
 
         public Article GetArticle(string articleName)
         {
-            throw new System.NotImplementedException();
+            return ();
         }
 
         public void Add(Article article)
