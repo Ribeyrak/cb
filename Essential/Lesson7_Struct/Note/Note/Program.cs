@@ -1,33 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Note
 {
-    struct Notebook
+    internal struct Notebook
     {
-        private int model;
-        private string manufacturer;
-        private decimal price;
+        public int Model { get; }
+
+        public string Manufacture { get; }
+
+        public decimal Price { get; }
 
         public Notebook(int model, string manufacturer, decimal price)
         {
-            this.model = model;
-            this.manufacturer = manufacturer;
-            this.price = price;
+            Model = model;
+            Manufacture = manufacturer;
+            Price = price;
         }
 
         public void Show()
         {
-            Console.WriteLine("Test Show");
+            Console.WriteLine(Model);
         }
     }
-    class Program
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var instance = new Notebook(164,"tets",65);
+
+            //instance.Model = 164;
+            //instance.Manufacture = "Bomba";
+            //instance.Price = 55;
+            instance.Show();
+
+            Console.ReadKey();
         }
     }
 }
