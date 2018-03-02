@@ -2,36 +2,44 @@
 
 namespace Note
 {
-    internal struct Notebook
+    struct Notebook
     {
-        public int Model { get; }
+        private string _model;
+        private string _manufacturer;
+        private decimal _price;
 
-        public string Manufacture { get; }
-
-        public decimal Price { get; }
-
-        public Notebook(int model, string manufacturer, decimal price)
+        public string Model
         {
-            Model = model;
-            Manufacture = manufacturer;
-            Price = price;
+            get { return _model; }
+        }
+
+        public string Manufacture
+        {
+            get { return _manufacturer; }
+        }
+
+        public decimal Price
+        {
+            get { return _price; }
+        }
+
+        public Notebook(string model, string manufacturer, decimal price)
+        {
+            this._model = model;
+            this._manufacturer = manufacturer;
+            this._price = price;
         }
 
         public void Show()
         {
-            Console.WriteLine(Model);
+            Console.WriteLine("Модель товара {0} от производителя {1} стоимостью {2} грн.", _model, _manufacturer, _price);
         }
     }
-
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var instance = new Notebook(164,"tets",65);
-
-            //instance.Model = 164;
-            //instance.Manufacture = "Bomba";
-            //instance.Price = 55;
+            Notebook instance = new Notebook("AA7413R", "Gogo", 15000);
             instance.Show();
 
             Console.ReadKey();
