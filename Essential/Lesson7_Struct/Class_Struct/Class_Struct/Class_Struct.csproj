@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85EABD3B-4F57-4ED6-8ED3-23D7BAD1C327}</ProjectGuid>
+    <ProjectGuid>{C8C8BC50-611E-4C9C-BC5B-7AA7B8D61A59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Timetable</RootNamespace>
-    <AssemblyName>Timetable</AssemblyName>
+    <RootNamespace>Class_Struct</RootNamespace>
+    <AssemblyName>Class_Struct</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
