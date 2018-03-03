@@ -2,31 +2,32 @@
 
 namespace Class_Struct
 {
-    class MyClass
+    internal class MyClass
     {
         public string change;
     }
 
-    struct MyStruct
+    internal struct MyStruct
     {
         public string change;
     }
-    class Program
+
+    internal class Program
     {
-        static void ClassTaker(MyClass myClass)
+        private static void ClassTaker(MyClass myClass)
         {
             myClass.change = "изменено";
         }
 
-        static void StrucktTaker(MyStruct myStruct)
+        private static void StrucktTaker(MyStruct myStruct)
         {
             myStruct.change = "изменено";
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MyClass _class = new MyClass();
-            MyStruct _struct = new MyStruct();
+            var _class = new MyClass();
+            var _struct = new MyStruct();
 
             _class.change = "не изменено";
             _struct.change = "не изменено";
@@ -34,8 +35,8 @@ namespace Class_Struct
             ClassTaker(_class);
             StrucktTaker(_struct);
 
-            Console.WriteLine("Поле класа {0} ",_class.change);
-            Console.WriteLine("Поле структуры {0}",_struct.change);
+            Console.WriteLine("Поле класа {0} ", _class.change);
+            Console.WriteLine("Поле структуры {0}", _struct.change);
 
             Console.ReadKey();
         }
