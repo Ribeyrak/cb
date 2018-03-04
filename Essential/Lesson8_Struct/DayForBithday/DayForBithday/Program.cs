@@ -2,15 +2,15 @@
 
 namespace DayForBithday
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Введите день своего рождения:" );
-            DateTime _bithday = Convert.ToDateTime(Console.ReadLine());
-            DateTime _now = DateTime.Now;
-            
-            DateTime _thisYear = new DateTime(_now.Year, _bithday.Month, _bithday.Day);
+            Console.WriteLine("Введите день своего рождения:");
+            var _bithday = Convert.ToDateTime(Console.ReadLine());
+            var _now = DateTime.Now;
+
+            var _thisYear = new DateTime(_now.Year, _bithday.Month, _bithday.Day);
             TimeSpan _wait;
 
             if (_thisYear < _now)
