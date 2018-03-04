@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Printer
 {
@@ -15,9 +12,8 @@ namespace Printer
 
     static class MyClass
     {
-        static void Print(string stroka, int color)
+        public static void Print(string stroka, int color)
         {
-            stroka = Console.ReadLine();
             switch (color)
             {
                 case (int)Colors.Red:
@@ -33,15 +29,19 @@ namespace Printer
                     Console.ForegroundColor = ConsoleColor.Blue;
                     break;
             }
-
-            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(stroka);
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tets");
+            Console.WriteLine("Введите свой текст:");
+            string stroka = Console.ReadLine();
+            Console.WriteLine("Выбирите цвет для текста: 0 - Red, 1 - Yellow, 2 - Green, 3 - Blue");
+            int color = Convert.ToInt32(Console.ReadLine());
+
+            MyClass.Print(stroka, color);
 
             Console.ReadKey();
         }
