@@ -1,22 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Worker
 {
-    enum Position
+    public enum Position
     {
-        Trainee = 0,
-        Seller = 1,
-        Manager = 2,
-        Director = 3
+        Trainee = 40,
+        Seller = 120,
+        Manager = 160,
+        Director = 180
     }
-    class Program
+
+    public class Accauntant
     {
-        static void Main(string[] args)
+        public bool AskForBonus(Position worker, int hours)
         {
+            if ((int) worker > hours)
+                return true;
+            else
+                return false;
+        }
+    }
+
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Выбирите должность для расчета:\nСтажер - 1, Продавец - 2, Менеджер - 3, Директор - 4");
+            var worker = Console.ReadLine();
+            Console.WriteLine("Введите кол-во отработаных часов");
+            var hours = Console.ReadLine();
+
+            Accauntant.AskForBonus();
+
+            Console.ReadKey();
         }
     }
 }
