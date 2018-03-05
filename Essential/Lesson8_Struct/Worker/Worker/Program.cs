@@ -12,12 +12,12 @@ namespace Worker
 
     public class Accauntant
     {
-        public bool AskForBonus(Position worker, int hours)
+        public void AskForBonus(string worker, int hours)
         {
-            if ((int) worker > hours)
-                return true;
+            if ((int) Position.worker > hours)
+                Console.WriteLine("Выдать премию");
             else
-                return false;
+                Console.WriteLine("Превмию не выдавать");
         }
     }
 
@@ -30,7 +30,11 @@ namespace Worker
             Console.WriteLine("Введите кол-во отработаных часов");
             var hours = Console.ReadLine();
 
-            Accauntant.AskForBonus();
+            Accauntant.AskForBonus(worker, hours);
+
+            //Accauntant work = new Accauntant();
+            //if (work.AskForBonus(Position.))
+
 
             Console.ReadKey();
         }
