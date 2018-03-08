@@ -17,8 +17,7 @@ namespace AnonMethod
             Console.WriteLine("Введите третье число");
             int z = Convert.ToInt32(Console.ReadLine());
 
-            Delegate myDelegate;
-            myDelegate = delegate(int a, int b, int c) { return (a + b + c) / 3; };
+            Delegate myDelegate = (a, b, c) => { return (a + b + c) / 3; };
             int sum = myDelegate(x, y, z);
 
             Console.WriteLine("Среднее значение равное {0}", sum);
