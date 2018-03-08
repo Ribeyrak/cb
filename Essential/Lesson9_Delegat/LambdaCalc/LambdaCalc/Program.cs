@@ -13,31 +13,24 @@ namespace LambdaCalc
             Console.WriteLine("Введите второе число:");
             int y = Convert.ToInt32(Console.ReadLine());
             
-            MyDelegate Add = (a, b) => { return a + b; };
-            double add = Add(x,y);
-            MyDelegate Sub = (a, b) => { return a - b; };
-            double sub = Sub(x, y);             
-            MyDelegate Mul = (a, b) => { return x * y; };
-            double mul = Mul(x, y);
-            MyDelegate Dev = (a, b) => { return x / y; };
-            double dev = Dev(x, y);
+            MyDelegate del = null;
 
             Console.WriteLine("Выбирите знак арифметического действия");
             string sign = Console.ReadLine();
             switch (sign)
             {
                 case "+":
-                    Console.WriteLine(add);
+                    del = (a, b) => { return x + y; };
                     break;
                 case "-":
-                    Console.WriteLine(sub);
+                    del = (a, b) => { return x - y; };
                     break;
                 case "*":
-                    Console.WriteLine(mul);
+                    del = (a, b) => { return x * y; };
                     break;
                 case "/":
                     if (y == 0) Console.WriteLine("На ноль делить нельзя");
-                    else Console.WriteLine(dev);
+                    del = (a, b) => { return x / y; };
                     break;
 
                 default:
@@ -46,6 +39,8 @@ namespace LambdaCalc
                     break;
                 }
             }
+
+            Console.WriteLine(del(x,y));
             Console.ReadKey();
         }
     }
