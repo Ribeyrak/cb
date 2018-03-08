@@ -2,16 +2,16 @@
 
 namespace LambdaCalc
 {
-    public delegate double MyDelegate(int a, int b);
+    public delegate double MyDelegate(double a, double b);
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Введите первое число:");
-            int x = Convert.ToInt32(Console.ReadLine());
+            double x = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе число:");
-            int y = Convert.ToInt32(Console.ReadLine());
+            double y = Convert.ToInt32(Console.ReadLine());
             
             MyDelegate del = null;
 
