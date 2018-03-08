@@ -8,16 +8,17 @@ namespace AnonMethod
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Введите первое число");
+            Console.WriteLine("Vvedite 1 chislo");
             int x = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите второе число");
+            Console.WriteLine("Vtoroe chislo");
             int y = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите третье число");
+            Console.WriteLine("3 chislo");
             int z = Convert.ToInt32(Console.ReadLine());
 
-            Delegate myDelegate = (a, b, c) => { return (a + b + c) / 3; };
+            Delegate myDelegate;
+            myDelegate = (a, b, c) => { return (a + b + c) / 3; };
             int sum = myDelegate(x, y, z);
 
             Console.WriteLine("Среднее значение равное {0}", sum);
