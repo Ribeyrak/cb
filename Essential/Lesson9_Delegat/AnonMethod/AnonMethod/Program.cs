@@ -8,9 +8,18 @@ namespace AnonMethod
     {
         private static void Main(string[] args)
         {
-            int _summand1 = 5, _summand2 = 6, _summand3 = 7, sum = 0;
-            Delegate myDelegate = delegate(int a, int b, int c) { return (a + b + c) / 3; };
-            sum = myDelegate(_summand1, _summand2, _summand3);
+            Console.WriteLine("Введите первое число");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите третье число");
+            int z = Convert.ToInt32(Console.ReadLine());
+
+            Delegate myDelegate;
+            myDelegate = delegate(int a, int b, int c) { return (a + b + c) / 3; };
+            int sum = myDelegate(x, y, z);
 
             Console.WriteLine("Среднее значение равное {0}", sum);
 
