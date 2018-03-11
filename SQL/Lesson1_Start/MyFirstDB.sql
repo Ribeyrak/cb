@@ -54,3 +54,4 @@ BirthDate date NULL,
 )
 GO 
 
+EXET sp_help MyDB
